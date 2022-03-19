@@ -15,14 +15,9 @@ jobs:
       with:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS_EC2_METADATA_DISABLED: true
         aws-region: us-east-1
-    
-    - name: Yarn Install
-      run: |
-        yarn install
-    - name: Production Build
-      run: yarn build
     
     - name: Deploy to s3
       run: |
-        aws s3 sync ./build s3://christianhopf.xyz --acl public-read --delete
+        aws s3 sync ./ s3://christianhopf.xyz --acl public-read --delete
