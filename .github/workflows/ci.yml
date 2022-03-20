@@ -21,7 +21,6 @@ jobs:
       run: |
         yarn install
     - name: Production Build
-      run: cd portfolio
       run: yarn build
     
     - name: Deploy to s3
