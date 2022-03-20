@@ -1,0 +1,62 @@
+body{
+  background-color:rgb(31, 31, 31)
+}
+
+.App {
+  text-align: center;
+}
+
+/* STYLES FOR LINKS */
+a{
+  padding: 2vh;
+}
+a:link{
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited{
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover{
+  color: aqua;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:active{
+  color: aqua;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.introduction-header {
+  color: white;
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-size: 36px;
+  display: flex;
+  justify-content: center;
+}
+.introduction-p {
+  color: aqua;
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
