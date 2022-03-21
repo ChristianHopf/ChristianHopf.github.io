@@ -26,4 +26,4 @@ jobs:
     - name: Deploy to s3
       run: |
         aws s3 sync ./build s3://christianhopf.xyz --acl public-read --delete
-        aws cloudfront create-invalidation --distribution-id $PROD_CLOUDFRONT_DIST --paths "/*"
+        aws cloudfront create-invalidation --distribution-id E3481NR992F4YO --paths "/*"
