@@ -1,21 +1,15 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
-function Navigation(){
+function NewNav(){
     return(
-        <div className="navbar navigation justify-content-end">
-            <ul className="nav justify-content-end">
-            <li className="nav-item">
-                    <a href="/">Home</a>
-                </li>
-                <li className="nav-item">
-                    <a href="https://github.com/ChristianHopf">GitHub</a>
-                </li>
-                <li className="nav-item">
-                    <a href="https://linkedin.com/in/christian-hopf-codes">LinkedIn</a>
-                </li>
-            </ul>
-        </div>
+        <nav>
+            <NavLink to="/">Home</NavLink>
+            <a href="https://github.com/ChristianHopf">GitHub</a>
+            <a href="https://linkedin.com/in/christian-hopf-codes">LinkedIn</a>
+            <NavLink to="/books">Book Reviews</NavLink>
+        </nav>
     );
 }
 
-export default Navigation;
+export default NewNav;
