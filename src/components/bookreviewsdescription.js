@@ -2,13 +2,13 @@ import React from 'react';
 
 function Bookreviewsdescription(){
     return(
-        <div className="container">
-            <div className="container introduction-header">
+        <div>
+            <div className="introduction-header">
                 <p>
                     Book Reviews
                 </p>
             </div>
-            <div className="container introduction-p">
+            <div className="introduction-p">
                 <p>
                     This is where you'll find short reviews of some books I've read
                 </p>

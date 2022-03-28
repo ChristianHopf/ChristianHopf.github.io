@@ -5,7 +5,7 @@ import Introduction from '../components/introduction';
 
 function Home(){
     return(
-        <div>
+        <div className="home">
             <Navigation />
             <Introduction />
         </div>

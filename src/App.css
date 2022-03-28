@@ -1,14 +1,10 @@
 body{
-  background-color:rgb(31, 31, 31)
+  background-color: rgb(31, 31, 31);
 }
-
-.App {
-  text-align: center;
-}
-
 /* STYLES FOR LINKS */
 a{
   padding: 2vh;
+  font-family: "Lucida Console", "Courier New", monospace;
 }
 a:link{
   color: white;
@@ -32,23 +28,96 @@ a:active{
 }
 
 .introduction-header {
+  background-color:rgb(31, 31, 31);
   color: white;
   font-family: "Lucida Console", "Courier New", monospace;
   font-size: 36px;
+  text-align: center;
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 .introduction-p {
+  background-color:rgb(31, 31, 31);
   color: aqua;
   font-family: "Lucida Console", "Courier New", monospace;
   font-size: 24px;
+  text-align: center;
   display: flex;
   justify-content: center;
+  width: 100%;
+  min-height: 10vh;
+}
+
+.newnav{
+  background-color:rgb(31, 31, 31);
+  min-height: 70px;
+  width: 100%;
 }
 
 nav{
   display: flex;
   float: right;
+  background-color:rgb(31, 31, 31)
+}
+
+.portfolio{
+  background-color: rgb(31, 31, 31);
+  color: white;
+}
+
+/* PAGES */
+.bookreviews{
+  background-color: rgb(31, 31, 31);
+}
+
+.bookreviewsbody{
+  background-color: rgb(31, 31, 31);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.book{
+  display: flex;
+  flex-direction:row;
+  align-items: flex-start;
+  justify-content: left;
+  width: 100%;
+  padding: 10px 50px;
+}
+#bookimg{
+  width: 25vh;
+  padding-right: 10px;
+}
+.bookinfo{
+  background-color: white;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  padding: 2vh;
+  width: 50%;
+}
+.bookheader{
+  display: flex;
+  flex-direction: column;
+}
+.bookparagraph{
+  color: black;
+}
+.bookrating-green{
+  background-color: rgb(31, 31, 31);
+  color: rgb(0, 210, 0);
+}
+.bookrating-yellow{
+  background-color: rgb(31, 31, 31);
+  color: rgb(255, 255, 0);
+}
+.bookrating-red{
+  background-color: rgb(31, 31, 31);
+  color: red;
 }
 
 @media (prefers-reduced-motion: no-preference) {
