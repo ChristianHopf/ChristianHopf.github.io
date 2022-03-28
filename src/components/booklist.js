@@ -28,7 +28,7 @@ function Booklist(){
 
     const booksElements = books.map((book) =>  
         <div className="book">
-            <img id="bookimg" src={require(`../images/${book.Imagefile.S}`)}></img>
+            <img id="bookimg" src={require(`../images/${book.Imagefile.S}`)} alt={`Cover art for ${book.Title.S}`}></img>
             <div className="bookinfo">
                 <div className="bookheader">
                     <h3>{book.Title.S}</h3>
