@@ -13,16 +13,16 @@ function RatingColor(rating) {
 
 function Booklist() {
     // get JSON of all books, parse and map into book components
-    const url = 'https://9or9d5fu9g.execute-api.us-east-1.amazonaws.com/Stage/api/books';
+    const url = 'https://nk4vw3hosi.execute-api.us-east-1.amazonaws.com/Prod/api/books';
     const [books, setBooks] = React.useState([]);
     React.useEffect(() => {
         axios.get(url)
             .then(function (response) {
-                const booklist = JSON.parse(response.data.body);
+                const booklist = response.data;
                 setBooks(booklist);
             })
             .catch(function (error) {
-                console.error(error.response);
+                console.error(error)
             });
     }, []);
 

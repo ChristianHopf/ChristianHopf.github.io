@@ -1,0 +1,41 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  TRC Serverless Template
+
+Globals:
+  Function:
+    Timeout: 15
+# Defines what needs to be updated/created
+Resources:
+  # Defines the API gateway
+  BookApi:
+    Type: AWS::Serverless::Api
+    Properties:
+      Name: "BookAPI"
+      StageName: Prod
+      # Determines the settings for CORS
+      Cors:
+        AllowMethods: "'*'"
+        AllowHeaders: "'*'"
+        AllowOrigin: "'*'"
+  # Defines a lambda function
+  GetAllBooks:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: "getAllBooks"
+      # the path from my lambda function in VSCode compared to this file
+      CodeUri: lambdas/books/get
+      Handler: getAllBooks.lambda_handler
+      Runtime: python3.9
+      Policies:
+        - DynamoDBReadPolicy:
+            TableName: !Sub "Books"
+      # Creates the trigger that causes the lambda to be activated
+      Events:
+        GetEvents:
+          Type: Api
+          Properties:
+            RestApiId: !Ref BookApi
+            Path: /api/books
+            Method: GET
